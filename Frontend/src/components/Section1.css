@@ -1,26 +1,49 @@
-* {
-  box-sizing: border-box;
-}
-*, :after, :before {
-    box-sizing: border-box;
-}
-div {
+
+
+
+/* div {
     display: block;
+
+} */
+.containerA {
+   display: flex;
+   flex-flow: column;
+   align-items: center;
+   
+   margin: 0 auto;
+   background: linear-gradient(to bottom left, rgb(255, 255, 255), rgb(199, 193, 193));
+   ;
+    
 }
+
+
+.header {
+  color: rgb(0, 0, 0);
+  font-family: 'Segoe UI',
+  Tahoma,
+  Geneva,
+  Verdana,
+  sans-serif;
+  text-decoration: underline;
+  padding-left: 465px;
+  letter-spacing: 2px;
+}
+
 h1{
   text-align: center;
-  color: #fff;
+  
   padding: 10px;
 }
+
 h2{
   padding: 10px;
   text-align: center;
-  color: #fff;
+  color: rgb(0, 0, 0);
 }
 h3{
   padding: 10px;
   text-align: center;
-  color: #fff;
+  color: rgb(0, 0, 0);
   padding-top: 5px;
 }
 
@@ -79,12 +102,12 @@ h3{
 
 
 .col p{
-  /* display: flex;
-  width: -moz-fit-content;
-  width: fit-content; */
-  /* background-color: #8ca0ff; */
+  /* display: flex; */
+  width: 1200px;
+  /* background-color: #8ca0ff;  */
   margin-top: 10px;
   padding-right: 50px;
+  text-align: center;
   font-family: 'PT Sans', sans-serif;
   justify-content: center;
   align-items: center;
@@ -92,7 +115,7 @@ h3{
   font-size: 23px;
   padding: 5px;
   margin-bottom: 1em;
-  color: #fff;
+  color: rgb(0, 0, 0);
 }
 [class*="col-"] {
   float: left;
@@ -105,136 +128,24 @@ h3{
   display: table;
 }
 
-.container {
+/* .containerA {
    width: 100%;
    padding-right: 15px;
    padding-left: 15px;
    margin: 0px !important;
 }
 
- .container .row .col-4 .col .event{
+ .containerA .row .col-4 .col .event{
   position: relative;
   height: 180px;
 
   /* width: 130px; */
-  overflow-y: scroll;
-}
+  /* overflow-y: scroll; */
 
 
 
 
-.container .row .col-4 .col .event ul{
-  margin: 0;
-  padding: 0px;
-  box-sizing: border-box;
-}
 
-.col .event ul li{
-  list-style: none;
-  background: rgba(0,0,0,.3);
-  box-sizing: border-box;
-  border: 1px solid #f1f1f1;
-  border-radius: 7px;
-  height: 70px;
-  /* top: -10px; */
-}
-
-.col .event ul li .time{
-  position: relative;
-  padding: 10px;
-  background: #262626;
-  box-sizing: border-box;
-  border-radius: 7px;
-  /* width: 30%; */
-  height: 100%;
-  float: left;
-  text-align: center;
-  transition: .4s;
-}
-
-.col .event ul li:hover .time{
-  /* background: #e91e63; */
-  background: #0000FF;
-}
-
-.col .event ul li .time h3{
-  position: absolute;
-  margin: 0;
-  padding: 0;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  text-align: center;
-  color: #fff;
-  /* font-size: 25px; */
-  line-height: 22px;
-}
-/*
-.col .event ul li .time h2 span{
-  font-size: 20px;
-}
-*/
-
-.col .event ul li .details{
-  /* padding: 20px; */
-  /* background: #fff; */
-  box-sizing: border-box;
-  /* width: 70%; */
-  height: 100%;
-  /* top: -10px; */
-  /* float:left; */
-}
-
-.col .event ul li .details .name .col-l-7{
-  position: relative;
-  /* top: -10px; */
-  margin-left: 3px;
-}
-
-.col .event ul li .details h3 {
-  position: relative;
-  margin: 0;
-  margin-bottom: 3px;
-  font-size: 16px;
-  color: #fff;
-  /* padding: 5px; */
-  /* width: 50%; */
-
-}
-
-.col .event ul li .details i{
-  position: relative;
-  margin: 5px;
-  margin-bottom: 3px;
-  font-size: 14px;
-  color: #fff;
-}
-
-
-.col .event ul li .details a{
-  display: block;
-  text-decoration: none;
-  text-transform: uppercase;
-  padding: 10px;
-  /* padding: 10px 15px; */
-  border: 2px solid #262626;
-  margin-top: 10px;
-  /* font-size: 15px; */
-  transition: .5s;
-  color: #fff;
-  background: #262626;
-  /* width: 30%; */
-  text-align: center;
-
-}
-
-.col .event ul li .details a:hover{
-  /* background: #e91e63;
-   */
-   background: #0000FF;
-  color: #fff;
-  /* border-color:#e91e63; */
-}
 
 .col-l-2{
   width: 16.66%;
@@ -266,9 +177,9 @@ h3{
 [class*="col-l-"] {
   padding: 3px;
   float: left;
-}
- /* @media only screen and (min-width: 768px) {
-  For desktop:
+} 
+ @media only screen and (min-width: 768px) {
+  /* For desktop: */
   .col-1 {width: 8.33%;}
   .col-2 {width: 16.66%;}
   .col-3 {width: 25%;}
@@ -281,4 +192,27 @@ h3{
   .col-10 {width: 83.33%;}
   .col-11 {width: 91.66%;}
   .col-12 {width: 100%;}
-} */
+
+  
+}
+
+@media screen and (max-width: 768px) {
+    
+  .col p {
+    /* display: flex; */
+    width: 100%;
+    /* background-color: #8ca0ff;  */
+    margin-top: 10px;
+    padding-left: 60px;
+    text-align: center;
+    font-family: 'PT Sans', sans-serif;
+    justify-content: center;
+    align-items: center;
+    line-height: 20px;
+    font-size: 15px;
+    /* padding: 5px; */
+    margin-bottom: 1em;
+    color: rgb(0, 0, 0);
+  }
+}
+

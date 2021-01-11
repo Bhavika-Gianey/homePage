@@ -4,15 +4,18 @@ import Cards from '../Cards';
 import HeroSection from '../HeroSection';
 import Footer from '../Footer';
 // import {Achievements, Events} from '../Timeline';
-import {Events} from '../UpcomingEvents';
+import {UEvents} from '../UpcomingEvents';
+import {About} from '../About';
 
 
 function Home() {
   return (
     <>
       <HeroSection />
-      <Events />
-      <Cards />
+      <About />
+      <UEvents />
+      {/* <PEvents /> */}
+      {/* <Cards /> */}
       {/* <Achievements /> */}
       <Footer />
       

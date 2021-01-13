@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&family=Short+Stack&display=swap');
+
+
 * {
   box-sizing: border-box;
 }
@@ -7,22 +10,34 @@
 div {
     display: block;
 }
+
 h1{
   text-align: center;
   color: #262626;
   padding: 10px;
+  letter-spacing: 2px;
+  
+}
+.title{ 
+
+  text-decoration: underline;
+  text-transform: uppercase;
 }
 h2{
   padding: 10px;
   text-align: center;
   color: #262626;
+  letter-spacing: 2px;
+  text-decoration: underline;
 }
 h3{
   padding: 10px;
   text-align: center;
   color: #262626;
   padding-top: 5px;
+  font-size: 20px;
 }
+
 
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
@@ -95,7 +110,8 @@ h3{
   /* background-color: #8ca0ff; */
   margin-top: 10px;
   padding-right: 50px;
-  font-family: 'PT Sans', sans-serif;
+  font-family: PT Sans, Arial, Helvetica, sans-serif;
+  font-weight: 100px;
   justify-content: center;
   align-items: center;
   line-height: 40px;
@@ -158,7 +174,9 @@ h3{
 
 .col .event ul li .time{
   position: relative;
-  padding: 10px;
+  padding: 5px;
+  padding-top: 20px;
+  color: #fff;
   background: #262626;
   box-sizing: border-box;
   border-radius: 7px;
@@ -173,7 +191,7 @@ h3{
   /* background: #e91e63; */
   /* background: #ADEFD1FF; */
   /* background: rgb(0,128,128); */
-  background: #0000FF;
+  background: #5555f5;
 }
 
 .col .event ul li .time h3{
@@ -236,7 +254,7 @@ h3{
   text-transform: uppercase;
   padding: 10px;
   /* padding: 10px 15px; */
-  border: 2px solid #262626;
+  border: 2px solid #ffffff;
   margin-top: 10px;
   /* font-size: 15px; */
   transition: .5s;
@@ -250,8 +268,10 @@ h3{
 .col .event ul li .details a:hover{
   /* background: #e91e63;
    */
-   background: #0000FF;
-  color: #fff;
+   background: #ffffff;
+  color: rgb(0, 0, 0);
+  border: 2px solid rgb(35, 0, 116);
+  border-radius:10px;
   /* border-color:#e91e63; */
 }
 

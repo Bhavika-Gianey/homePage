@@ -30,12 +30,18 @@ let yr = newDate.getFullYear();
       setEvents(jsonRes)})
   })
 
+// events.filter(event => event.year == yr );
+    
 
 
-  events.sort(function (a, b) {
-  return b.year - a.year || b.month - a.month|| b.date - a.date|| a.time - b.time;
+ let b = events.sort(function (a, b) {
+  return  b.year - a.year || b.month - a.month|| b.date - a.date|| b.time - a.time;
 });
+b.reverse();
 
+  let a = events.sort(function (a, b) {
+  return  a.year - b.year || a.month - b.month|| a.date - b.date|| a.time - b.time;
+});
 
 
 
@@ -53,7 +59,7 @@ let yr = newDate.getFullYear();
       <div className="row">
           <div className="col-7 col-s-12">
             <div className="col">
-              <h1> About Us </h1>
+              <h1 className="title"> About Us </h1>
             </div>
             <div className=' col col-12'>
                 <p >For most people, the sky is the limit. For us, the sky is our home.”
@@ -62,16 +68,48 @@ let yr = newDate.getFullYear();
           </div>
           <div className="col col-5 col-s-12 ">
             <div className='col'>
-               <h2>Upcoming Events</h2>
+               <h1>Upcoming Events</h1>
 
                <div className="event">
-                 {events.map(event => (
+                 {a.filter(event => (event.year == yr && event.month >= mnth && event.date >= dt) ).map(event => (
                   <ul>
                     <li className="inline">
 
                         <div className="time col-l-2">
 
-                          <h3> {event.date} <br/><span>{event.month} </span></h3>
+                          <h5> {event.date}/{event.month}/{event.year}</h5>
+                        </div>
+                        <div className="details">
+                          <div className="name col-l-7">
+                            <h3>{event.name}</h3>
+                            <i className="fas fa-clock"> {event.time}</i>
+                          </div>
+                          <div className="join col-l-3">
+                            <a href="#">Join</a>
+                          </div>
+                        </div>
+                    </li>
+                    
+                  </ul>
+                ))}
+               </div>
+            </div>
+
+
+
+          </div>
+          <div className="col col-5 col-s-12 ">
+            <div className='col'>
+               <h1>Past Events</h1>
+
+               <div className="event">
+                 {b.filter(event => (event.year <= yr && event.month <= mnth && event.date < dt ) ).map(event => (
+                  <ul>
+                    <li className="inline">
+
+                        <div className="time col-l-2">
+
+                          <h5> {event.date}/{event.month}/{event.year}</h5>
                         </div>
                         <div className="details">
                           <div className="name col-l-7">

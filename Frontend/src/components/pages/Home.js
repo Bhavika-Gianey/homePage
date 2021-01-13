@@ -5,20 +5,20 @@ import HeroSection from '../HeroSection';
 import Footer from '../Footer';
 // import {Achievements, Events} from '../Timeline';
 import {UEvents} from '../UpcomingEvents';
-import {About} from '../About';
+// import {About} from '../About';
 
 
 function Home() {
   return (
     <>
       <HeroSection />
-      <About />
+
       <UEvents />
       {/* <PEvents /> */}
       {/* <Cards /> */}
       {/* <Achievements /> */}
       <Footer />
-      
+
     </>
   );
 }

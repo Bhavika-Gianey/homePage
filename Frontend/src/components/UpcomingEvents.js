@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import './section2.css';
+import './Section-1.css';
 
 export  function UEvents() {
 
@@ -30,50 +30,53 @@ let yr = newDate.getFullYear();
       setEvents(jsonRes)})
   })
 
-  
+
 
   events.sort(function (a, b) {
   return b.year - a.year || b.month - a.month|| b.date - a.date|| a.time - b.time;
 });
 
-  
 
-  
+
+
 
   // events.sort(sortByProperty("month"));
 
   // events.sort(sortByProperty("date"));
 
-    
-   
-  
+
+
+
 
   return (
-    <div className="containerB">
-      
-      
-          <div className="col-4 ">
-            <div className='col col-s-6'>
-               <h1 className="titlehead"><b>EVENTS</b></h1>
+    <div className="container">
+      <div className="row">
+          <div className="col-7 col-s-12">
+            <div className="col">
+              <h1> About Us </h1>
+            </div>
+            <div className=' col col-12'>
+                <p >For most people, the sky is the limit. For us, the sky is our home.”
+      The Aero-modelling Club at IIT BHU, Varanasi since its inception has expanded exponentially with the introduction of innovative technologies, be it the IC engine planes, the autonomous drones or other awesome flying models. We fabricate, fix, and fly to satiate our passion. Our phenomenal stunts will readily capture your attention towards our hobby of aeromodelling - to fabricate a splendid flying machine of your own and soar high in the sky.</p>
+            </div>
+          </div>
+          <div className="col col-5 col-s-12 ">
+            <div className='col'>
+               <h2>Upcoming Events</h2>
+
                <div className="event">
-                  <ul className="eventsUl">
-
-                  
                  {events.map(event => (
-                  
-                   
-               
-                    
-                    
+                  <ul>
+                    <li className="inline">
 
-                    <li className="inline list">
                         <div className="time col-l-2">
-                          <h3> {event.date} <br/><span>{event.month} </span><br/><span>{event.year} </span></h3>
+
+                          <h3> {event.date} <br/><span>{event.month} </span></h3>
                         </div>
                         <div className="details">
                           <div className="name col-l-7">
                             <h3>{event.name}</h3>
-                            <i className="fas fa-clock"> {event.time} Hrs</i>
+                            <i className="fas fa-clock"> {event.time}</i>
                           </div>
                           <div className="join col-l-3">
                             <a href="#">Join</a>
@@ -81,29 +84,17 @@ let yr = newDate.getFullYear();
                         </div>
                     </li>
                     
-                    
-                    
-                    ))}
-                    
-                       </ul>
-                    </div>
-            </div>
+                  </ul>
+                ))}
+               </div>
             </div>
 
 
 
-
-
-
-
-
-
-             
-            
-
-          
+          </div>
         </div>
-  
+      </div>
+
   );
 }
 
@@ -136,15 +127,15 @@ let yr = newDate.getFullYear();
 //     }).then(jsonRes => setEvents(jsonRes))
 //   })
 
-    
 
-  
+
+
 
 //   return (
 //     <div className="container">
-      
-      
-        
+
+
+
 
 
 
@@ -171,7 +162,7 @@ let yr = newDate.getFullYear();
 //                           </div>
 //                         </div>
 //                     </li>
-               
+
 //                   </ul>
 //                </div>
 //             ))}
@@ -180,11 +171,11 @@ let yr = newDate.getFullYear();
 
 
 
-             
-            
 
-          
+
+
+
 //         </div>
-  
+
 //   );
 // }

@@ -16,9 +16,9 @@ h1{
   color: #262626;
   padding: 10px;
   letter-spacing: 2px;
-  
+
 }
-.title{ 
+.title{
 
   text-decoration: underline;
   text-transform: uppercase;
@@ -81,25 +81,46 @@ h3{
   .col-s-10 {width: 83.33%;}
   .col-s-11 {width: 91.66%;}
   .col-s-12 {width: 100%;}
-  .col-5{
-    float: none !important;
-    width: 80%;
+  .col-4{
+    /* float: none !important; */
+    /* width: 100%;
     margin: 0 auto;
     display: flex;
-    justify-content: center;
+    justify-content: center; */
+  }
+  .col{
+
   }
 }
-.container .row .col-5 .col{
+.container .row .col-4 .col{
   margin: 0 auto;
 }
-
+.container .row{
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.container .row .col-8 .col-s-12{
+  display: inline-block;
+  margin: 0 auto;
+}
 @media only screen and (max-width: 768px) {
   /* For mobile phones: */
   [class*="col-"] {
     padding: 15px;
-    width: 100%;
+    width: 100% ;
   }
 
+}
+@media only screen and (min-width: 1104px){
+  .col-8{
+      padding-top: 60px !important;
+      /* margin-top: 0px !important; */
+      /* line-height: 10px !important; */
+  }
+  .col-8 p{
+    line-height: 45px !important;
+  }
 }
 
 
@@ -141,13 +162,13 @@ h3{
 }
 
 
-.container .row .col-5 .col h2{
+.container .row .col-4 .col h2{
   padding-bottom: 40px;
 }
- .container .row .col-5 .col .event{
+ .container .row .col-4 .col .event{
   /* padding-top: 25px; */
   position: relative;
-  height: 280px;
+  height: 200px;
 
   /* width: 130px; */
   overflow-y: scroll;
@@ -156,7 +177,7 @@ h3{
 
 
 
-.container .row .col-5 .col .event ul{
+.container .row .col-4 .col .event ul{
   margin: 0;
   padding: 0px;
   box-sizing: border-box;
@@ -178,6 +199,7 @@ h3{
   padding-top: 20px;
   color: #fff;
   background: #262626;
+  /* background: rgb(0,128,128); */
   box-sizing: border-box;
   border-radius: 7px;
   /* width: 30%; */
@@ -189,9 +211,12 @@ h3{
 
 .col .event ul li:hover .time{
   /* background: #e91e63; */
-  /* background: #ADEFD1FF; */
+  background: #1E90FF;
   /* background: rgb(0,128,128); */
-  background: #5555f5;
+  /* background: #5555f5; */
+  /* background: #f1f1f1; */
+  color: black;
+  font-weight: bold;
 }
 
 .col .event ul li .time h3{
@@ -268,7 +293,7 @@ h3{
 .col .event ul li .details a:hover{
   /* background: #e91e63;
    */
-   background: #ffffff;
+   background: #1E90FF;
   color: rgb(0, 0, 0);
   border: 2px solid rgb(35, 0, 116);
   border-radius:10px;

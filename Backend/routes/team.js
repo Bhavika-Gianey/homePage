@@ -5,7 +5,8 @@ const markedown = require('marked');
 
 router.get('/',async function(req,res,next){
     const members = await Team.find().sort({
-        year:'asc'
+        year:'desc',
+        por:'asc'
     });
     res.render('team/team',{members:members,
     csrfToken: req.csrfToken()});

@@ -1,6 +1,9 @@
 
 import React, {useEffect, useState} from 'react';
 import '../../App.css';
+import '../resources.css';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 export default function Resources() {
 
@@ -24,8 +27,11 @@ export default function Resources() {
         return res.json()
       }
     }).then(jsonRes => setResources(jsonRes))
-  })
-
+  },[])
+  
+  useEffect(()=>{
+    Aos.init({duration:1500});
+  },[]);
 
   //On clicking Resources(navbar) we should get a dropdown menu with options as-
   // Swarm Robotics
@@ -38,13 +44,22 @@ export default function Resources() {
   //On clicking any of these we need to render(after filtering according to type data) resources page.
 
   return (
-    <div className="container">
-      {resources.map(resource => (
-      <div>
-        <h1>{resource.name}</h1>
-        {/* whatever accordingly */}
+    <div className="rsc-container">
+      <div className='rsc-title' data-aos='fade-down'>
+        <h1>Resources</h1>
       </div>
+      <div className="panels-container">
+      {resources.map(resource => (
+      <div className='rsc-panel'>
+        <div className='rsc-text'>
+          <h2>{resource.type}</h2>
+          <h5>{resource.name}</h5>
+        </div>
+        <a className='btns' href={resource.drive_link}>Content</a>
+        <a className='btns' href={resource.youtube_link}>Session</a>
+        </div>
       ))}
+      </div>
     </div>
   )
 }

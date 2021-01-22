@@ -21,7 +21,7 @@ export default function Events() {
         return res.json()
       }
     }).then(jsonRes => setEvents(jsonRes))
-  })
+  },[])
 
   return (
     <div className="container">

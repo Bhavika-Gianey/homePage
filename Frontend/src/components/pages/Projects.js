@@ -22,7 +22,7 @@ export default function Projects() {
         return res.json()
       }
     }).then(jsonRes => setProjects(jsonRes))
-  })
+  },[])
 
   return (
     <div className="container">

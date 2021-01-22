@@ -28,10 +28,10 @@ let yr = newDate.getFullYear();
       }
     }).then((jsonRes) => {
       setEvents(jsonRes)})
-  })
+  },[])
 
 // events.filter(event => event.year == yr );
-
+    
 
 
  let b = events.sort(function (a, b) {
@@ -57,18 +57,24 @@ b.reverse();
   return (
     <div className="container">
       <div className="row">
-          <div className="col-8 col-s-12">
+          <div className="col-7 col-s-12">
             <div className="col">
               <h1 className="title"> About Us </h1>
             </div>
             <div className=' col col-12'>
-                <p >For most people, the sky is the limit. For us, the sky is our home.”
+                <p style={{fontFamily:"FF Tisa"}}>For most people, the sky is the limit. For us, the sky is our home.”
       The Aero-modelling Club at IIT BHU, Varanasi since its inception has expanded exponentially with the introduction of innovative technologies, be it the IC engine planes, the autonomous drones or other awesome flying models. We fabricate, fix, and fly to satiate our passion. Our phenomenal stunts will readily capture your attention towards our hobby of aeromodelling - to fabricate a splendid flying machine of your own and soar high in the sky.</p>
+      
             </div>
+             
+            <div  className="img"> 
+      <img src="https://cdn.pixabay.com/photo/2016/07/29/10/41/vector-1552354__340.png" alt="" height="110px" width="150px"/>
+       </div>
+       
           </div>
-          <div className="col col-4 col-s-6 ">
+          <div className="col col-5 col-s-12 ">
             <div className='col'>
-               <h1>Upcoming Events</h1>
+               <h1 className="title1">Upcoming Events</h1>
 
                <div className="event">
                  {a.filter(event => (event.year == yr && event.month >= mnth && event.date >= dt) ).map(event => (
@@ -89,18 +95,18 @@ b.reverse();
                           </div>
                         </div>
                     </li>
-
+                    
                   </ul>
                 ))}
                </div>
             </div>
+
+
+
           </div>
-          <div className="col col-4 col-s-6">
-
-
-
+          <div className="col col-5 col-s-12 ">
             <div className='col'>
-               <h1>Past Events</h1>
+               <h1 className="title1">Past Events</h1>
 
                <div className="event">
                  {b.filter(event => (event.year <= yr && event.month <= mnth && event.date < dt ) ).map(event => (
@@ -112,24 +118,26 @@ b.reverse();
                           <h5> {event.date}/{event.month}/{event.year}</h5>
                         </div>
                         <div className="details">
-                          <div className="name col-l-10">
+                          <div className="name col-l-7">
                             <h3>{event.name}</h3>
                             <i className="fas fa-clock"> {event.time}</i>
                           </div>
-
+                          <div className="join col-l-3">
+                            <a href="#">Join</a>
+                          </div>
                         </div>
                     </li>
-
+                    
                   </ul>
                 ))}
                </div>
             </div>
 
 
+
           </div>
         </div>
       </div>
-    // </div>
 
   );
 }
@@ -215,6 +223,3 @@ b.reverse();
 
 //   );
 // }
-// <div className="join col-l-3">
-//   <a href="#">Join</a>
-// </div>

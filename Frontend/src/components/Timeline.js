@@ -24,7 +24,7 @@ export  function Achievements() {
         return res.json()
       }
     }).then(jsonRes => setAchievements(jsonRes))
-  })
+  },[])
 
   return (
     <div className="container">

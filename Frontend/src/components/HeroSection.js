@@ -1,30 +1,38 @@
 import React from 'react';
+import { HashLink } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
 import '../App.css';
 import { Button } from './Button';
 import './HeroSection.css';
-
+// <h1>Welcome to </h1>
+// <h1>AMC- IIT BHU Varanasi</h1>
 function HeroSection() {
   return (
     <div className='hero-container'>
       <video src='/videos/video-1.mp4' autoPlay loop muted />
-      <h1>Welcome to AMC- IIT BHU Varanasi</h1>
+      <h1  class="animate__animated animate__bounce">Welcome to </h1>
+      <h2 className="maintitle">AMC- IIT BHU Varanasi</h2>
       <p>Where Sky is never the Limit</p>
       <div className='hero-btns'>
-        <Button
-          className='btns'
-          buttonStyle='btn--outline'
-          buttonSize='btn--large'
-        >
-          GET STARTED
-        </Button>
-        <Button
-          className='btns'
-          buttonStyle='btn--primary'
-          buttonSize='btn--large'
-          onClick={console.log('hey')}
-        >
-          WATCH TRAILER <i className='far fa-play-circle' />
-        </Button>
+        <HashLink to="/home#aboutus">
+          <Button
+            className='btns'
+            buttonStyle='btn--outline'
+            buttonSize='btn--large'
+          >
+            GET STARTED
+          </Button>
+        </HashLink>
+        <a target="_blank" href="https://www.youtube.com/watch?v=oN_T_YsRQQA">
+          <Button
+            className='btns'
+            buttonStyle='btn--primary'
+            buttonSize='btn--large'
+            onClick={console.log('hey')}
+          >
+            WATCH TRAILER <i className='far fa-play-circle' />
+          </Button>
+        </a>
       </div>
     </div>
   );

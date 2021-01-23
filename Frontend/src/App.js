@@ -2,13 +2,15 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import './App.css';
 import Home from './components/pages/Home';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route,Redirect } from 'react-router-dom';
 import Team from './components/pages/Team';
 import Projects from './components/pages/Projects';
 import Alumni from './components/pages/Alumni';
 import Events from './components/pages/Events';
 import Resources from './components/pages/Resources';
 import ProjectDetails from './components/pages/Project-detail';
+import {UEvents} from './components/UpcomingEvents';
+
 
 
 function App() {
@@ -17,12 +19,14 @@ function App() {
       <Router>
         <Navbar />
         <Switch>
-          <Route path='/' exact component={Home} />
+          <Route path='/home' exact component={Home} />
+
           <Route path='/team' component={Team} />
           <Route path='/projects' component={Projects} />
           <Route path='/alumni' component={Alumni} />
           <Route path='/events' component={Events} />
           <Route path='/resources' component={Resources} />
+          <Redirect to="/home" />
           {/* <Route path='/:productid' component={ProjectDetails} /> */}
 
         </Switch>
@@ -32,3 +36,4 @@ function App() {
 }
 
 export default App;
+          // <Route path='/aboutus' exact component={UEvents} />

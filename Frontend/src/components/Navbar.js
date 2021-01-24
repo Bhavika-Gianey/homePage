@@ -69,7 +69,7 @@ function Navbar() {
                 Alumni
               </Link>
             </li>
-            <li className='nav-item'>
+            {/* <li className='nav-item'>
               <Link
                 to='/events'
                 className='nav-links'
@@ -77,7 +77,7 @@ function Navbar() {
               >
                 Events 
               </Link>
-            </li>
+            </li> */}
             <li className='nav-item'>
               <Link
                 to='/resources'

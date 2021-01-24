@@ -135,6 +135,7 @@ app.get('/alumni', routesApi);
 app.get('/events', routesApi);
 app.get('/resources', routesApi);
 app.get('/achievements', routesApi);
+app.get('/:productid', routesApi);
 
 //getting error page
 app.use(errorController.get404);

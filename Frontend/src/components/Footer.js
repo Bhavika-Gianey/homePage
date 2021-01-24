@@ -13,51 +13,52 @@ function Footer() {
           <div class='footer-logo'>
             <Link to='/' className='social-logo'>
               AMC
-              <i class='fab fa-typo3' />
+              {/* <i class='fab fa-typo3' /> */}
             </Link>
           </div>
           <small class='website-rights'>AMC © 2020</small>
           <div class='social-icons'>
-            <Link
+            <a
               class='social-icon-link facebook'
-              to='/'
+              
               target='_blank'
+              href='https://www.facebook.com/amc.iitbhu/'
               aria-label='Facebook'
             >
               <i class='fab fa-facebook-f' />
-            </Link>
-            <Link
+            </a>
+            <a
               class='social-icon-link instagram'
-              to='/'
+              href='https://www.instagram.com/amc.iitbhu/'
               target='_blank'
               aria-label='Instagram'
             >
               <i class='fab fa-instagram' />
-            </Link>
-            <Link
+            </a>
+            <a
               class='social-icon-link youtube'
-              to='/'
+              href='https://www.youtube.com/user/amciitbhu'
               target='_blank'
               aria-label='Youtube'
             >
               <i class='fab fa-youtube' />
-            </Link>
-            <Link
+            </a>
+            <a
               class='social-icon-link twitter'
               to='/'
               target='_blank'
               aria-label='Twitter'
             >
               <i class='fab fa-twitter' />
-            </Link>
-            <Link
+            </a>
+            <a
               class='social-icon-link twitter'
-              to='/'
+              href='https://www.linkedin.com/company/amc-rocks/'
               target='_blank'
               aria-label='LinkedIn'
             >
               <i class='fab fa-linkedin' />
-            </Link>
+            </a>
           </div>
         </div>
       </section>

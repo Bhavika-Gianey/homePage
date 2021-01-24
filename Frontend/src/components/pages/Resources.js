@@ -52,8 +52,8 @@ export default function Resources() {
       {resources.map(resource => (
       <div className='rsc-panel'>
         <div className='rsc-text'>
-          <h2>{resource.type}</h2>
-          <h5>{resource.name}</h5>
+          <h2>{resource.name}</h2>
+          <h5>{resource.type}</h5>
         </div>
         <a className='btns' href={resource.drive_link}>Content</a>
         <a className='btns' href={resource.youtube_link}>Session</a>

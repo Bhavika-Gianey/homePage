@@ -55,11 +55,11 @@ b.reverse();
 
 
   return (
-    <div className="container" id="aboutus">
+    <div className="container" id="aboutus" >
       <div className="row">
           <div className="col-7 col-s-12">
             <div className="col">
-              <h1 className="title"> About Us </h1>
+              <h2 className="title" > About Us </h2>
             </div>
             <div className=' col col-12'>
                 <p style={{fontFamily:"FF Tisa"}}>For most people, the sky is the limit. For us, the sky is our home.”
@@ -74,7 +74,7 @@ b.reverse();
           </div>
           <div className="col col-5 col-s-12 ">
             <div className='col'>
-               <h1 className="title1">Upcoming Events</h1>
+               <h2 className="title1">Upcoming Events</h2>
 
                <div className="event">
                  {a.filter(event => (event.year == yr && event.month >= mnth && event.date >= dt) ).map(event => (
@@ -106,7 +106,7 @@ b.reverse();
           </div>
           <div className="col col-5 col-s-12 ">
             <div className='col'>
-               <h1 className="title1">Past Events</h1>
+               <h2 className="title1">Past Events</h2>
 
                <div className="event">
                  {b.filter(event => (event.year <= yr && event.month <= mnth && event.date < dt ) ).map(event => (

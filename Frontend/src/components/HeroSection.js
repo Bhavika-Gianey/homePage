@@ -8,13 +8,14 @@ import './HeroSection.css';
 // <h1>AMC- IIT BHU Varanasi</h1>
 function HeroSection() {
   return (
-    <div className='hero-container'>
-      <video src='/videos/video-1.mp4' autoPlay loop muted />
+    <div className='hero-container' id='hero'>
+      <video src='/videos/video-2.mp4' autoPlay loop muted />
       <h1  class="animate__animated animate__bounce">Welcome to </h1>
-      <h2 className="maintitle">AMC- IIT BHU Varanasi</h2>
+      <h2 className="maintitle">Aero-Modelling Club,</h2>
+      <h2> IIT-(BHU)</h2>
       <p>Where Sky is never the Limit</p>
       <div className='hero-btns'>
-        <HashLink to="/home#aboutus">
+        <HashLink to="/#aboutus">
           <Button
             className='btns'
             buttonStyle='btn--outline'

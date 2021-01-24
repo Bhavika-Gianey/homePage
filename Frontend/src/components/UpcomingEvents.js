@@ -122,8 +122,8 @@ b.reverse();
                             <h3>{event.name}</h3>
                             <i className="fas fa-clock"> {event.time}</i>
                           </div>
-                          <div className="join col-l-3">
-                            <a href="#">Join</a>
+                          <div className="join col-l-3" >
+                            <a href="#"><i id="play" class="fas fa-play-circle fa-10px"></i></a>
                           </div>
                         </div>
                     </li>

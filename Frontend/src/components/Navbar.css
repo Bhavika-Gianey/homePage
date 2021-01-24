@@ -10,6 +10,11 @@
   z-index: 999;
 }
 
+.logopic{
+  width: 150px;
+  height: auto;
+  padding-right: 10px;
+}
 .navbar-container {
   display: flex;
   justify-content: center;
@@ -121,7 +126,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    transform: translate(25%, 50%);
+    /* transform: translate(25%, 50%); */
   }
 
   .menu-icon {

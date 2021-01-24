@@ -6,13 +6,13 @@ import { Link } from 'react-router-dom';
 function Footer() {
   return (
     <div className='footer-container'>
-      
-      
+
+
       <section class='social-media'>
         <div class='social-media-wrap'>
           <div class='footer-logo'>
             <Link to='/' className='social-logo'>
-              AMC
+              <img className="logopic" src= {require('../image/logo.jpeg')}/>
               {/* <i class='fab fa-typo3' /> */}
             </Link>
           </div>
@@ -20,7 +20,7 @@ function Footer() {
           <div class='social-icons'>
             <a
               class='social-icon-link facebook'
-              
+
               target='_blank'
               href='https://www.facebook.com/amc.iitbhu/'
               aria-label='Facebook'

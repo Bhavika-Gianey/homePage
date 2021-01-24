@@ -27,21 +27,26 @@ function Navbar() {
   return (
     <>
       <nav className='navbar'>
+
         <div className='navbar-container'>
-          {/* <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
-            TRVL
-            <i class='fab fa-typo3' />
-          </Link> */}
+          <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+            <img className="logopic" src= {require('../image/logo.jpeg')}/>
+         </Link>
           <div className='menu-icon' onClick={handleClick}>
             <i className={click ? 'fas fa-times' : 'fas fa-bars'} />
           </div>
+          <li className='nav-item'>
+            <Link to='/' className='nav-links' onClick={closeMobileMenu}>
+              <p>  </p>
+            </Link>
+          </li>
           <ul className={click ? 'nav-menu active' : 'nav-menu'}>
             <li className='nav-item'>
               <Link to='/' className='nav-links' onClick={closeMobileMenu}>
                 Home
               </Link>
             </li>
-            
+
             <li className='nav-item'>
               <Link
                 to='/projects'
@@ -75,7 +80,7 @@ function Navbar() {
                 className='nav-links'
                 onClick={closeMobileMenu}
               >
-                Events 
+                Events
               </Link>
             </li> */}
             <li className='nav-item'>
@@ -88,9 +93,9 @@ function Navbar() {
               </Link>
             </li>
 
-           
+
           </ul>
-          
+
         </div>
       </nav>
     </>
